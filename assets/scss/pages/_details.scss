@@ -1,0 +1,413 @@
+body {
+    background-color: #E5E5E5;
+}
+
+.details p {
+    position: relative;
+}
+
+.details--banner .details{
+    padding: 60px 0;
+}
+
+.details p:after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 63px;
+    height: 5px;
+    width: 5px;
+    background-color: #6E7980;
+    border-radius: 50%;
+}
+.price {
+    position: relative;
+}
+
+.price:after {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0px;
+    height: 1px;
+    width: 100%;
+    background-color: #E4EAED;
+    border-radius: 50%;
+}
+
+.decsroption--lineee{
+    position: relative;
+}
+.decsroption--lineee:after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #E4EAED;
+    bottom: -10;
+    left: 0;
+}
+
+
+.details {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &--content {
+        &--breadcumbs {
+            padding-bottom: 22px;
+
+            span {
+                font-family: 'DM Sans';
+                font-size: 14px;
+                font-weight: 500;
+                color: #6E7980;
+            }
+
+            .xtra_color {
+                color: #0080FF;
+            }
+
+            .home-breadcumbs {
+                padding-right: 6px !important;
+            }
+
+            .default-breadcumbs {
+                padding-right: 5px !important;
+            }
+
+        }
+
+        h3 {
+            padding-bottom: 20px;
+            color: #09090A;
+            font-family: 'DM Sans';
+            font-size: 32px;
+            font-weight: 700;
+
+        }
+
+        p {
+            padding-bottom: 20px;
+            font-family: 'DM Sans';
+            font-size: 16px;
+            font-weight: 500;
+            color: #0080FF;
+
+            span {
+                padding: 22px !important;
+                font-family: 'DM Sans';
+                font-size: 16px;
+                font-weight: 400;
+                color: #6E7980;
+            }
+
+
+        }
+
+        &__button {
+            padding: 11px 24px;
+            background-color: #0080FF;
+            color: #fff;
+            border: none;
+            font-family: 'DM Sans';
+            font-weight: 500;
+            margin-right: 10px;
+            border: 1px solid #0080FF;
+        }
+
+        & .xtra_btn {
+            background-color: transparent;
+            color: #0080FF;
+            font-weight: 600;
+            transition: .5s;
+        }
+
+        & .xtra_btn:hover {
+            background-color: #0080FF;
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+
+    .details--img {
+        margin-left: 20px;
+    }
+}
+
+
+.description {
+    padding-top: 46px;
+
+    &--header {
+        padding-bottom: 16px;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #09090A;
+
+        }
+    }
+
+    p {
+        color: #546066;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: 'DM Sans';
+        line-height: 24px;
+        padding: 0 0 10px 0!important;
+
+
+    }
+
+    .description--content {
+        position: relative;
+
+        // margin-bottom: 48px;
+        &--padding {
+            padding-bottom: 25px !important;
+        }
+    }
+
+    .description--content:after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: #E4EAED;
+        bottom: -10;
+        left: 0;
+    }
+
+
+}
+
+.card {
+    padding: 30px;
+    border:0px solid #fff!important;
+    box-shadow: -2px 7px 20px #f1f1f1;
+
+    &--header {
+        .brand {
+            padding-top: 5px !important;
+            padding-bottom: 24px !important;
+            display: block;
+
+            span {
+                color: #3E474D;
+                padding-right: 8px !important;
+                font-weight: 400;
+                font-size: 14px;
+            }
+
+            a {
+                box-shadow: 2px 10px 11px #f1f1f1;
+                text-align: center;
+                display: inline-block;
+                height: 48px;
+                width: 48px;
+                text-align: center;
+                line-height: 48px;
+                border-radius: 50%;
+            }
+
+
+
+        }
+
+        .price {
+            padding-bottom: 24px !important;
+            position: relative;
+
+            .price:after {
+                position: absolute;
+                content: '';
+                height: 21px;
+                width: 100%;
+                background-color: red;
+                bottom: -10;
+                left: 0;
+            }
+
+            &__left {
+                span {
+                    color: #09090A;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+
+            &__right {
+                span {
+                    color: #09090A;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                .price_color {
+                    color: #6E7980;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &--description {
+        padding-top: 24px;
+        &--item {
+            margin-bottom: 7px;
+            .card--description__left {
+                span {
+                    color: #3E474D;
+                    font-size: 14px;
+                    font-weight: 400;
+                    padding-left: 5px!important;
+                }
+            }
+
+            .card--description__right {
+                span {
+                    color: #3E474D;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+}
+
+.card--description--item,
+.price {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.template--feature {
+    margin-top: 48px;
+
+    &--header {
+        padding-bottom: 16px;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #09090A;
+        }
+    }
+
+    &-item {
+        span {
+            color: rgba(84, 96, 102, 1);
+            font-size: 16px;
+            font-weight: 400;
+            font-family: 'DM Sans';
+            padding: 7px !important;
+        }
+    }
+}
+
+
+
+
+@media(max-width:575px) {
+    
+    .order1{
+        order:1;
+    }
+    .order2{
+        order:2;
+        text-align: center;
+    }
+    .details--content {
+        text-align: center;
+    }
+    .details p:after {   
+        height: 0px; 
+    }
+    .details--content {
+        
+        padding-bottom: 67px;
+    }
+    .details .details--img {
+        
+        margin-left: 0px;
+    }
+    .details--content h3 {
+        font-size: 22px;
+        
+    }
+    .newest {
+       
+        padding: 88px 0 0px 0;
+    }
+    .secondary--footer-details {
+        padding: 22px 0 20px 0;
+    }
+    .secondary--footer-order-two{
+        order:1;
+        padding-bottom: 10px;
+    }
+    .secondary--footer-order-one{
+        order:2;
+    }
+    
+}
+@media(min-width:576px) and (max-width:767px) {
+    .details--content {
+        text-align: center;
+    }
+    .order1{
+        order:1;
+    }
+    .order2{
+        order:2;
+        text-align: center;
+    }
+    .details p:after {  
+        height: 0px;
+    }
+    .details--content {
+        
+        padding-bottom: 67px;
+    }
+    
+}
+
+@media(min-width:768px) and (max-width:991px) {
+    .Related{
+        margin: 0; 
+        padding-bottom: 0;
+    }
+    .order1{
+        order:1;
+    }
+    .order2{
+        order:2;
+        text-align: center;
+    }
+    .details--content {
+        padding-bottom: 88px;
+    }
+    .newest--header h3 {
+        font-size: 32px; 
+    }
+    .details .details--img { 
+        margin-left: 0px;
+        display: block;
+        text-align: center;
+    }
+    .footer {
+        background-size: inherit!important;
+    }
+}
+@media(min-width:992px) and (max-width:1199px) {
+   .Related{
+       padding-bottom: 0px;
+   }
+    
+}
