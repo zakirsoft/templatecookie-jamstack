@@ -1,7 +1,9 @@
 <template>
     <div class="filter--card">
         <div class="filter--card--img">
-            <a href="#"><img src="~/assets/images/filter-items.png" class=" filter--card--img" alt="..."></a>
+            <nuxt-link :to="{ name: 'product-slug', params: {slug: 'abcd'} }">
+                <img src="~/assets/images/filter-items.png" class=" filter--card--img" alt="...">
+            </nuxt-link>
             <div class="filter--card--overlay text-center">
                 <a href="#">Preview</a>
                 <a href="#">Download</a>
@@ -9,9 +11,9 @@
         </div>
         <div class="filter--card--body">
             <a class="cat" href="#">Figma template</a>
-            <a href="#">
+            <nuxt-link :to="{ name: 'product-slug', params: {slug: 'abcd'} }">
                 <h5 class="card-title">Poco - Creative Agency XD Template</h5>
-            </a>
+            </nuxt-link>
             <div class="filter--card--body--footer align-items-center">
                 <span class="card-text-left">79$</span>
                 <span class="card-text-right">
@@ -31,7 +33,6 @@
                         </svg></span> <span class=" card-text-right--number"><span
                             class=" card-text-right--number">2.4k</span></span>
                 </span>
-
             </div>
         </div>
     </div>

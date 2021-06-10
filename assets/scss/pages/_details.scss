@@ -6,6 +6,10 @@ body {
     position: relative;
 }
 
+.details--banner .details{
+    padding: 60px 0;
+}
+
 .details p:after {
     position: absolute;
     content: "";
@@ -128,7 +132,6 @@ body {
     }
 
     .details--img {
-        padding-top: 60px;
         margin-left: 20px;
     }
 }

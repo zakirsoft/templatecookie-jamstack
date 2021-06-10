@@ -1,8 +1,9 @@
 <template>
   <div>
     <!--  banner Section start-->
+    <!-- require(`~/assets/img/${image}.jpg`) -->
     <section class=" header" id="header">
-        <div class="banner" style="background-image: url('~assets/images/banner-background.png')">
+        <div class="banner" :style="'background-image: url('+ require('~/assets/images/banner-background.png') +')'">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-7 ">
@@ -88,7 +89,7 @@
     </section>
 
     <!--  Newest template Section start-->
-    <section class="newest" style="background-image: url('~/assets/images/newest-baackground.png')">
+    <section class="newest" :style="'background-image: url('+ require('~/assets/images/newest-background.png') +')'">
         <div class="container">
             <div class="newest--header">
                 <div class="newest--header--title">

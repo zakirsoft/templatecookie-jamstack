@@ -23,29 +23,9 @@
                 </div>
             </div>
         </section>
-        <!-- secondary footer Section start-->
-        <section id="secondary--footer" class="secondary--footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12 align-self-center secondary--footer-order-one">
-                        <div class="secondary--footer--left ">
-                            <span>Copyright © 2021 Zakirsoft. All rights reserved.</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 secondary--footer-order-two">
-                        <div class="secondary--footer--right">
-                            <ul>
-                                <li><a href="">Faqs</a></li>
-                                <li><a href="">Privacy Policy</a></li>
-                                <li><a href="">Terms & Conditions</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <!--  footer Section start-->
-        <section class="footer" style="background-image: url('~assets/images/footer-background.jpg')">
+        <section class="footer" :style="'background-image: url('+ require('~/assets/images/footer-background.jpg') +')'">
             <div class="container footer-content">
                 <div class="row">
                     <div class="col-md-12 col-lg-4">
@@ -91,6 +71,28 @@
                                 <li><a href="">Behance</a></li>
                                 <li><a href="">Github</a></li>
                                 <li><a href="">Facebook</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- secondary footer Section start-->
+        <section id="secondary--footer" class="secondary--footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 align-self-center secondary--footer-order-one">
+                        <div class="secondary--footer--left ">
+                            <span>Copyright © 2021 Zakirsoft. All rights reserved.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 secondary--footer-order-two">
+                        <div class="secondary--footer--right">
+                            <ul>
+                                <li><a href="">Faqs</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Terms & Conditions</a></li>
                             </ul>
                         </div>
                     </div>

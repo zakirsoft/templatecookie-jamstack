@@ -1,8 +1,8 @@
 <template>
     <div>
         <!-- details banner Section start-->
-        <section class=" details details--banner">
-            <div class="details" style="background-image: url('src/images/details-banner.png')">
+        <section class="details details--banner">
+            <div class="details" :style="'background-image: url('+ require('~/assets/images/details-banner.png') +')'">
                 <div class="container">
                     <div class="row ">
                         <div class="col-md-12 col-lg-6 align-self-center  order2">
@@ -57,17 +57,14 @@
                                 <button type="submit" class="details--content__button xtra_btn">
                                     Live Preview
                                 </button>
-
-
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-6  order1">
                             <div class="details--img">
-                                <img src="src/images/Preview image.png" alt="">
+                                <img src="~/assets/images/Preview image.png" alt="">
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -115,8 +112,8 @@
                             <div class="card--header">
                                 <duv class="brand">
                                     <span>Made with:</span>
-                                    <a href="#"><img src="src/images/figma.png" alt=""></a>
-                                    <a href=""> <img src="src/images/xd.png" alt=""></a>
+                                    <a href="#"><img src="~/assets/images/figma.png" alt=""></a>
+                                    <a href=""> <img src="~/assets/images/xd.png" alt=""></a>
 
 
                                 </duv>
@@ -447,7 +444,7 @@
                     <div class="col-md-6  col-lg-3 col-sm-6">
                         <div class="filter--card">
                             <div class="filter--card--img">
-                                <a href="#"><img src="src/images/filter-items.png" class=" filter--card--img" alt="..."></a>
+                                <a href="#"><img src="~/assets/images/filter-items.png" class=" filter--card--img" alt="..."></a>
                                 <div class="filter--card--overlay text-center">
                                     <a href="#">Preview</a>
                                     <a href="#">Download</a>
@@ -485,7 +482,7 @@
                     <div class="col-md-6  col-lg-3 col-sm-6">
                         <div class="filter--card">
                             <div class="filter--card--img">
-                                <a href="#"><img src="src/images/filter-items.png" class=" filter--card--img" alt="..."></a>
+                                <a href="#"><img src="~/assets/images/filter-items.png" class=" filter--card--img" alt="..."></a>
                                 <div class="filter--card--overlay text-center">
                                     <a href="#">Preview</a>
                                     <a href="#">Download</a>
@@ -523,7 +520,7 @@
                     <div class="col-md-6  col-lg-3 col-sm-6">
                         <div class="filter--card">
                             <div class="filter--card--img">
-                                <a href="#"><img src="src/images/filter-items.png" class=" filter--card--img" alt="..."></a>
+                                <a href="#"><img src="~/assets/images/filter-items.png" class=" filter--card--img" alt="..."></a>
                                 <div class="filter--card--overlay text-center">
                                     <a href="#">Preview</a>
                                     <a href="#">Download</a>
@@ -561,7 +558,7 @@
                     <div class="col-md-6  col-lg-3 col-sm-6">
                         <div class="filter--card">
                             <div class="filter--card--img">
-                                <a href="#"><img src="src/images/filter-items.png" class=" filter--card--img" alt="..."></a>
+                                <a href="#"><img src="~/assets/images/filter-items.png" class=" filter--card--img" alt="..."></a>
                                 <div class="filter--card--overlay text-center">
                                     <a href="#">Preview</a>
                                     <a href="#">Download</a>
@@ -608,7 +605,7 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="Subscribe--box--content--left">
-                            <img src="src/images/subscribe.svg" alt="subscribe">
+                            <img src="~/assets/images/subscribe.svg" alt="subscribe">
                         </div>
                     </div>
                     <div class="col-lg-5 align-items-center">
