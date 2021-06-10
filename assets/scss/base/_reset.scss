@@ -23,6 +23,7 @@ a {
     display: inline-block;
     color: $lightBlack;
     @include animate(.3s);
+    text-decoration: none;
 }
 
 li {
