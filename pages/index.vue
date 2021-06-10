@@ -160,54 +160,27 @@
     </section>
 
     <!--  free template Section start-->
-    <section class="newest free">
-        <div class="container">
-            <div class="newest--header ">
-                <div class="newest--header--title">
-                    <h3>Free Template</h3>
-                </div>
-                <div class="newest--header--arrow">
-                    <span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.25 12H3.75" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M10.5 5.25L3.75 12L10.5 18.75" stroke="white" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </span>
-                    <span class="after-line">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.75 12H20.25" stroke="white" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="white" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </span>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6 col-lg-4 col-sm-6">
-                    <product />
-                </div>
-                <div class="col-md-6 col-lg-4 col-sm-6">
-                    <product />
-                </div>
-                <div class="col-md-6 col-lg-4 col-sm-6">
-                    <product />
-                </div>
-            </div>
-        </div>
-    </section>
+    <slider-section :products="[1,2,3,4]"></slider-section>
   </div>
 </template>
 
 <script>
 import Product from '@/components/Product.vue'
+import SliderSection from '~/components/SliderSection.vue'
+
 export default {
-    components: {
-        Product,
-    }
+  components: {
+    Product,
+    SliderSection
+  },
+  methods: {
+    // onSwiper(swiper) {
+    //   console.log(swiper);
+    // },
+    // onSlideChange() {
+    //   console.log('slide change');
+    // },
+  }
 }
 </script>
 
