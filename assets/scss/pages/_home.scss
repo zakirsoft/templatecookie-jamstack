@@ -50,7 +50,7 @@ h2 {
 }
 
 body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif, sans-serif;
     background: #f1f1f1;
 
 }
@@ -246,7 +246,7 @@ body {
 
         h2 {
             font-weight: 700;
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'DM Sans', sans-serif, sans-serif;
             color: #09090A;
             font-size: 72px;
             line-height: 80px;
@@ -283,7 +283,7 @@ body {
             background-color: #0080FF !important;
 
             border: 0;
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'DM Sans', sans-serif, sans-serif;
             font-weight: 500;
             margin-left: -130px;
             align-self: center;
@@ -429,7 +429,7 @@ body {
                     color: #3E474D !important;
                     font-weight: 400;
                     font-size: 14px;
-                    font-family: 'DM Sans';
+                    font-family: $font;
                     margin-left: 2px;
                 }
 
@@ -471,7 +471,7 @@ body {
             margin-bottom: 50px;
             font-size: 40px;
             font-weight: 700;
-            font-family: 'DM Sans';
+            font-family: $font;
 
         }
 
@@ -511,7 +511,7 @@ body {
             margin-bottom: 50px;
             font-size: 40px;
             font-weight: 700;
-            font-family: 'DM Sans';
+            font-family: $font;
 
         }
 
@@ -596,7 +596,7 @@ body {
                 color: #fff;
                 font-size: 16px;
                 font-weight: 500;
-                font-family: 'DM Sans', sans-serif;
+                font-family: 'DM Sans', sans-serif, sans-serif;
                 padding-left: 20px;
                 padding-right: 20px;
                 height: 48px;
@@ -1134,7 +1134,7 @@ body {
   
   .main-navbar ul li a {
     font-size: 16px;
-    font-family: 'DM Sans';
+    font-family: $font;
     font-weight: 500;
     padding: 8px 10px;
     color: #546066;
