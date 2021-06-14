@@ -61,7 +61,7 @@
                         </div>
                         <div class="col-md-12 col-lg-6  order1">
                             <div class="details--img">
-                                <img src="~/assets/images/Preview image.png" alt="">
+                                <img src="~/assets/images/image.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -596,30 +596,6 @@
 
                 </div>
 
-            </div>
-        </section>
-
-        <!--  subscribe Section start-->
-        <section id="Subscribe" class="Subscribe">
-            <div class="container Subscribe--box">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="Subscribe--box--content--left">
-                            <img src="~/assets/images/subscribe.svg" alt="subscribe">
-                        </div>
-                    </div>
-                    <div class="col-lg-5 align-items-center">
-                        <div class="Subscribe--box--content--right">
-                            <h3>Subscribe to our Newsletter</h3>
-                            <p>Get news in your inbox every week! We hate spam too, so no<br> worries about this.</p>
-                            <div class="form-group Subscribe--box--content--right--form ">
-                                <input type="email" class="form-control Subscribe--box--content--right--form__searchbar"
-                                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
-                                <button type="submit" class="Subscribe--box--content--right__button">Subscribe</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </div>

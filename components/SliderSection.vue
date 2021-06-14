@@ -1,6 +1,7 @@
 <template>
     <!--  free template Section start-->
-    <section class="newest free">
+    <!-- :style="'background-image: url('+ require('~/assets/images/newest-background.png') +')'" -->
+    <section class="newest free" >
       <div class="container">
         <div class="newest--header ">
           <div class="newest--header--title">
