@@ -54,9 +54,9 @@
         </a>
         <nav>
             <ul class="nav_item" id="nav_item">
-                <li><a class="active" href="#">Free Template</a></li>
-                <li><a href="#">HTML Template</a></li>
-                <li><a href="#">UI Template</a></li>
+                <li><nuxt-link :to="{ name: 'category-slug', params: {slug: 'abcd' }}" class="active" href="#">Free Template</nuxt-link></li>
+                <li><nuxt-link :to="{ name: 'category-slug', params: {slug: 'hello' }}" href="#">HTML Template</nuxt-link></li>
+                <li><nuxt-link :to="{ name: 'category-slug', params: {slug: 'awesome' }}" href="#">UI Template</nuxt-link></li>
             </ul>
         </nav>
     </section>
