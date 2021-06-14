@@ -46,13 +46,12 @@ h2 {
     margin-bottom: 20px;
     font-size: 30px;
     font-weight: 300;
-    font-family: 'Raleway', sans-serif;
+    font-family: $font;
 }
 
 body {
-    font-family: 'DM Sans', sans-serif, sans-serif;
+    font-family: $font;
     background: #f1f1f1;
-
 }
 
 .text-rightt {
@@ -65,9 +64,6 @@ body {
 
 /* ////////////////////////////////////////////
 // after,before,hover and many other effects css */
-
-
-
 
 .filter-template-menu-item ul li a {
     position: relative;
@@ -246,7 +242,7 @@ body {
 
         h2 {
             font-weight: 700;
-            font-family: 'DM Sans', sans-serif, sans-serif;
+            font-family: $font;
             color: #09090A;
             font-size: 72px;
             line-height: 80px;
@@ -283,7 +279,7 @@ body {
             background-color: #0080FF !important;
 
             border: 0;
-            font-family: 'DM Sans', sans-serif, sans-serif;
+            font-family: $font;
             font-weight: 500;
             margin-left: -130px;
             align-self: center;
@@ -596,7 +592,7 @@ body {
                 color: #fff;
                 font-size: 16px;
                 font-weight: 500;
-                font-family: 'DM Sans', sans-serif, sans-serif;
+                font-family: $font;
                 padding-left: 20px;
                 padding-right: 20px;
                 height: 48px;
@@ -715,7 +711,7 @@ body {
 @media(min-width:992px) and (max-width:1199px) {
     .banner--content h2 {
         font-weight: 700;
-        font-family: "DM Sans", sans-serif;
+        font-family: $font;
         color: #09090A;
         font-size: 50px;
         line-height: 50px;
@@ -778,7 +774,7 @@ body {
 @media(min-width:768px) and (max-width:991px) {
     .banner--content h2 {
         font-weight: 700;
-        font-family: "DM Sans", sans-serif;
+        font-family: $font;
         color: #09090A;
         font-size: 36px;
         line-height: 45px;
@@ -892,7 +888,7 @@ body {
     }
     .banner--content h2 {
         font-weight: 700;
-        font-family: "DM Sans", sans-serif;
+        font-family: $font;
         color: #09090A;
         font-size: 36px;
         line-height: 45px;
