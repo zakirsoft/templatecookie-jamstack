@@ -1,7 +1,6 @@
 <template>
   <div>
     <!--  banner Section start-->
-    <!-- require(`~/assets/img/${image}.jpg`) -->
     <section class=" header" id="header">
         <div class="banner" :style="'background-image: url('+ require('~/assets/images/banner-background.png') +')'">
             <div class="container">
@@ -175,10 +174,10 @@ export default {
   },
   methods: {
     // onSwiper(swiper) {
-    //   console.log(swiper);
+    //   alert(swiper);
     // },
     // onSlideChange() {
-    //   console.log('slide change');
+    //   alert('slide change');
     // },
   }
 }

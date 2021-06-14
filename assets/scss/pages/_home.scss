@@ -451,13 +451,11 @@ body {
 ////////////////////////////////////////////
 // newest-template css
 */
-
-
 .newest {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 70px 0;
+    // margin: 70px 0;
     padding: 88px 0 70px 0;
     &--header {
         display: flex;
@@ -497,28 +495,20 @@ body {
 
 .featured {
     margin: 70px 0  60px  0;
-    
-    
-
     &--header {
-
-
         h3 {
             margin-bottom: 50px;
             font-size: 40px;
             font-weight: 700;
             font-family: $font;
-
         }
-
     }
 
     .filter--card--body {
         padding: 16px 20px 16px 20px;
-
-      
     }
 }
+
 /*
 ////////////////////////////////////////////
 // free-template css
@@ -1116,7 +1106,7 @@ body {
   }
   
   .main-navbar .logo {
-    margin: 0rem 1.5rem; 
+    margin: 0rem; 
   }
   
   .nav_item {
@@ -1126,6 +1116,9 @@ body {
   
   .main-navbar ul li {
     margin-right: 1rem;
+    &:last-child {
+        margin-right: 0;
+    }
   }
   
   .main-navbar ul li a {

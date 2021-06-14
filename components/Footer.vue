@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--  subscribe Section start-->
-        <section id="Subscribe" class="Subscribe">
+        <!-- <section id="Subscribe" class="Subscribe">
             <div class="container Subscribe--box">
                 <div class="row">
                     <div class="col-lg-7">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!--  footer Section start-->
         <section class="footer" :style="'background-image: url('+ require('~/assets/images/footer-background.jpg') +')'">
