@@ -39,8 +39,8 @@
                         <div class="footer--content--item">
                             <h4>Other Product</h4>
                             <ul>
-                                <li><a href="">Echotemplate</a></li>
-                                <li><a href="">Codeshikhi</a></li>
+                                <li><a href="https://echotemplate.com" target="_blank">Echotemplate</a></li>
+                                <li><a href="https://codeshikhi.io" target="_blank">Codeshikhi</a></li>
                             </ul>
                         </div>
                     </div>
@@ -48,9 +48,9 @@
                         <div class="footer--content--item">
                             <h4>Company</h4>
                             <ul>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Career <span class="hire">We’re hiring</span></a></li>
-                                <li><a href="">Contacts</a></li>
+                                <li><a href="https://zakirsoft.com/about" target="_blank">About</a></li>
+                                <li><a href="https://zakirsoft.com/career" target="_blank">Career <span class="hire">We’re hiring</span></a></li>
+                                <li><a href="https://zakirsoft.com/contact" target="_blank">Contacts</a></li>
                             </ul>
                         </div>
                     </div>
@@ -67,10 +67,10 @@
                         <div class="footer--content--item">
                             <h4>Follow Us</h4>
                             <ul>
-                                <li><a href="">Dribbble</a></li>
-                                <li><a href="">Behance</a></li>
-                                <li><a href="">Github</a></li>
-                                <li><a href="">Facebook</a></li>
+                                <li><a href="https://themeforest.net/user/templatecookie" target="_blank">Themeforest</a></li>
+                                <li><a href="https://github.com/templatecookie" target="_blank">Github</a></li>
+                                <li><a href="https://www.facebook.com/templatecookie/" target="_blank">Behance</a></li>
+                                <li><a href="https://www.uplabs.com/users/templatecookie/" target="_blank">Facebook</a></li>
                             </ul>
                         </div>
                     </div>
