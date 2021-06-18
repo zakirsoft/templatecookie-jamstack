@@ -19,6 +19,4 @@ export default {
 
 <style lang="scss">
     @import '~assets/scss/main.scss';
-    @import '~bootstrap/scss/bootstrap.scss';
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 </style>

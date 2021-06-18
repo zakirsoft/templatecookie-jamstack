@@ -13,7 +13,7 @@
                                 ac ligula
                                 lobortis imperdiet. Aenean in est mattis.
                             </p>
-                            <form>
+                            <!-- <form>
                                 <div class="form-group banner--content--form justify-content-center">
                                     <input type="email" class="form-control banner--content__searchbar"
                                         id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -31,9 +31,8 @@
                                         <span>Search</span>
                                     </button>
                                 </div>
-                            </form>
+                            </form> -->
                         </div>
-
                     </div>
                 </div>
 
@@ -42,7 +41,7 @@
     </section>
 
     <!--  filter-template Section start-->
-    <section id="filter-template" class=" filter-template">
+    <section id="filter-template" class="filter-template">
         <div class="container  filter-template--box">
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-md-9 text-center">
