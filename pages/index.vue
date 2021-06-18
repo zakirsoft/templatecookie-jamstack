@@ -87,7 +87,8 @@
     </section>
 
     <!--  Newest template Section start-->
-    <section class="newest" :style="'background-image: url('+ require('~/assets/images/newest-background.png') +')'">
+    <slider-section :products="products" :slidesPerView="5"  title="Newest Template" :bgImage="require('~/assets/images/newest-background.png')"></slider-section>
+    <!-- <section class="newest" :style="'background-image: url('+ require('~/assets/images/newest-background.png') +')'">
         <div class="container">
             <div class="newest--header">
                 <div class="newest--header--title">
@@ -128,7 +129,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!--  free Template  Section start-->
     <section class="featured">
@@ -158,7 +159,7 @@
     </section>
 
     <!--  free template Section start-->
-    <slider-section :products="[1,2,3,4]"></slider-section>
+    <slider-section :products="products" :slidesPerView="5" title="Free Template"></slider-section>
   </div>
 </template>
 
@@ -170,6 +171,52 @@ export default {
   components: {
     Product,
     SliderSection
+  },
+  data(){
+      return {
+          products: [
+              {
+                  id: 1,
+                  title: 'Product title goes here 1',
+                  price: 95
+              },
+              {
+                  id: 2,
+                  title: 'Product title goes here 2',
+                  price: 63
+              },
+              {
+                  id: 3,
+                  title: 'Product title goes here 3',
+                  price: 92
+              },
+              {
+                  id: 4,
+                  title: 'Product title goes here 4',
+                  price: 29
+              },
+              {
+                  id: 5,
+                  title: 'Product title goes here 5',
+                  price: 68
+              },
+              {
+                  id: 6,
+                  title: 'Product title goes here 6',
+                  price: 12
+              },
+              {
+                  id: 7,
+                  title: 'Product title goes here 7',
+                  price: 46
+              },
+              {
+                  id: 8,
+                  title: 'Product title goes here 8',
+                  price: 8
+              },
+          ]
+      }
   },
   methods: {
     // onSwiper(swiper) {
