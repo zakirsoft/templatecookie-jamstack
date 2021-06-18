@@ -48,7 +48,7 @@
             </div>
         </section>
         <!--  filter-template Section start-->
-        <section id="filter-template" class="filter-template">
+        <section class="filter-template" style="padding-top: 100px">
             <div class="container  filter-template--box">
                 <!--  item-->
                 <div class="row">

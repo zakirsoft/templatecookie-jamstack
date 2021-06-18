@@ -51,7 +51,7 @@ h2 {
 
 body {
     font-family: $font;
-    background: #f1f1f1;
+    background: #fff;
 }
 
 .text-rightt {
@@ -366,7 +366,6 @@ body {
         display: flex;
         justify-content: space-evenly;
 
-
         a {
             text-decoration: none;
             color: #ffff;
@@ -385,7 +384,6 @@ body {
 
     &--body {
         padding: 16px 16px 16px 16px;
-
         a {
             text-transform: uppercase;
             color: #8A9399;
@@ -397,8 +395,6 @@ body {
         a:hover{
             color:#8A9399;
         }
-
-
 
         h5 {
             color: #09090A;
@@ -454,6 +450,7 @@ body {
 // newest-template css
 */
 .newest {
+    background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -519,7 +516,6 @@ body {
 
 .free {
     background: rgba(228, 234, 237, 0.5);
-
 }
 
 /*
