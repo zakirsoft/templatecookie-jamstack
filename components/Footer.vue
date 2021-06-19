@@ -69,8 +69,8 @@
                             <ul>
                                 <li><a href="https://themeforest.net/user/templatecookie" target="_blank">Themeforest</a></li>
                                 <li><a href="https://github.com/templatecookie" target="_blank">Github</a></li>
-                                <li><a href="https://www.facebook.com/templatecookie/" target="_blank">Behance</a></li>
-                                <li><a href="https://www.uplabs.com/users/templatecookie/" target="_blank">Facebook</a></li>
+                                <li><a href="https://www.uplabs.com/users/templatecookie/" target="_blank">Uplabs</a></li>
+                                <li><a href="https://www.facebook.com/templatecookie/" target="_blank">Facebook</a></li>
                             </ul>
                         </div>
                     </div>
