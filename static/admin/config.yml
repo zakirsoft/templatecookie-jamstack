@@ -54,9 +54,11 @@ collections:
       - {label: "Featured Image", name: "banner", widget: "image"}
       - {label: "Seo Description (max-158 character)", name: "description", widget: "markdown"}
   - name: "gallery"
-    label: "Gallery" 
+    label: "Gallery"
+    folder: "images/gallery" # The path to the folder where the documents are stored
     widget: "list"
     optional: true
+    create: true # Allow users to create new documents in this collection
     fields:
       - {label: "Title", name: "imgTitle", widget: "string"}
       - {label: "Description", name: "imgDesc", widget: "string"}
