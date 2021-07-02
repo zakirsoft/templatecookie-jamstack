@@ -54,10 +54,10 @@ collections:
       - {label: "Featured Image", name: "banner", widget: "image"}
       - {label: "Seo Description (max-158 character)", name: "description", widget: "markdown"}
   - name: "gallery"
-         label: "Gallery" 
-         widget: "list"
-         optional: true
-         fields:
-          - {label: "Title", name: "imgTitle", widget: "string"}
-          - {label: "Description", name: "imgDesc", widget: "string"}
-          - {label: "Gallery Image", name: "imgSrc", widget: "image"}
+    label: "Gallery" 
+    widget: "list"
+    optional: true
+    fields:
+      - {label: "Title", name: "imgTitle", widget: "string"}
+      - {label: "Description", name: "imgDesc", widget: "string"}
+      - {label: "Gallery Image", name: "imgSrc", widget: "image"}
