@@ -1,19 +1,63 @@
-backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+site_url: https://templatecookie-nuxt.netlify.app/
+logo_url: https://templatecookie-nuxt.netlify.app/icon.png
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts/blog" # The path to the folder where the documents are stored
+  - label: 'Site settings'
+    name: 'site'
+    files:
+      - label: 'Info'
+        name: 'info'
+        file: 'content/site/info.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: Site Name, name: sitename, widget: string, hint: 'This is used for the site title' }
+          - {
+              label: Site Description,
+              name: sitedescription,
+              widget: string,
+              hint: 'This is used as descriptive text for links that link to this site',
+            }
+          # - { label: Site Email, name: siteemail, widget: string, required: false }
+  - name: "product" # Used in routes, e.g., /admin/collections/blog
+    label: "Product" # Used in the UI
+    folder: "content/_products" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{day}}-{{month}}-{{year}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "product"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Demo Link", name: "link", widget: "string"}
+      - {label: "Purchase Link", name: "purchase", widget: "string"}
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Version", name: "version", widget: "string"}
+      - {label: "Product Price", name: "price", widget: "number"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Template Feature", name: "template_feature", widget: "markdown"}
+  - name: "category" # Used in routes, e.g., /admin/collections/blog
+    label: "Category" # Used in the UI
+    folder: "content/_category" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "category"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "banner", widget: "image"}
+      - {label: "Seo Description (max-158 character)", name: "description", widget: "markdown"}
+  - name: "gallery"
+         label: "Gallery" 
+         widget: "list"
+         optional: true
+         fields:
+          - {label: "Title", name: "imgTitle", widget: "string"}
+          - {label: "Description", name: "imgDesc", widget: "string"}
+          - {label: "Gallery Image", name: "imgSrc", widget: "image"}
