@@ -30,7 +30,7 @@
                                                 stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                    <span class="default-breadcumbs">Template</span>
+                                    <span class="default-breadcumbs">Product</span>
                                     <span class="default-breadcumbs">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -46,10 +46,9 @@
                                                 stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                    <span class="xtra_color default-breadcumbs">Shopery eCommerce</span>
-
+                                    <span class="xtra_color default-breadcumbs">{{ product.title }}</span>
                                 </div>
-                                <h3>Shopery — Organic eCommerce Figma <br>Template</h3>
+                                <h3>{{ product.title }}</h3>
                                 <p class="my-3">$59.00 <span>MIT Licenses</span></p>
                                 <button type="submit" class="details--content__button">
                                     Buy Now
@@ -79,34 +78,8 @@
                                 <h3>Description</h3>
                             </div>
                             <div class="description--content">
-                                <p>
-                                    Shopery is a premium Figma template for the ecommerce businesses based on organic food. It
-                                    is perfectly
-                                    suitable for any natural food-related ecommerce website such as farm, bakery, organic nature
-                                    cafe, fresh
-                                    food store, Market food, Grocery market, Organic eCommerce website, Organic food shop,
-                                    Organic market,
-                                    Supermarket, and online grocery store. The template includes essential pages to create any
-                                    type of
-                                    eCommerce website: Shop, Product Detail, Shopping Cart, Checkout, Blog, User Dashboard,
-                                    Order History,
-                                    Order Details, Contact, Faqs.</p>
-                                <p> This website is designed based on extensive UX Research in order to provide the best
-                                    experience to its
-                                    users with advanced Find perfect products with better filters and make users fall in love
-                                    with the
-                                    shopping.</p>
-                                <p> You can edit this Figma template easily, it’s 100% customizable. All layers, groups, and
-                                    components are
-                                    logically named. All shapes are resizable and editable with no quality loss. It’s based on
-                                    Bootstrap 5
-                                    grid systems. (1320px)</p>
-                                <p class="description--content--padding">This Figma template is perfect for converting into
-                                    HTML, WordPress,
-                                    Joomla, or any other CMS.</p>
-                                <div class="decsroption--lineee"></div>
+                               <nuxt-content :document="product"/>
                             </div>
-
                         </div>
                         <div class="col-md-12 col-lg-4">
                             <div class="card">
@@ -285,9 +258,12 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
+                    <code>
+                      <pre>
+                        {{ product }}
+                      </pre>
+                    </code>
                 </div>
             </section>
 
@@ -423,6 +399,15 @@ import SliderSection from '~/components/SliderSection.vue';
 export default {
   components: {
     SliderSection
+  },
+  async asyncData ({ $content, params }) {
+    const product = await $content('/products', params.slug)
+      .sortBy('createdAt', 'desc')
+      .fetch()
+      .catch((err) => {
+        error({ statusCode: 404, message: 'Product not found' })
+      })
+    return { product }
   },
   data(){
     return {
