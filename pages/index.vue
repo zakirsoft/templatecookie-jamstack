@@ -56,10 +56,11 @@
                 </div>
             </div>
 
+            {{ products }}
             <!--  item-->
             <div class="row">
-                <div class="col-md-6  col-lg-3 col-sm-6">
-                    <product />
+                <div class="col-md-6 col-lg-3 col-sm-6" v-for="product in products" :key="product.id">
+                    <product :product="product" />
                 </div>
                 <div class="col-md-6 col-lg-3  col-sm-6">
                     <product />
@@ -171,6 +172,17 @@ export default {
   components: {
     Product,
     SliderSection
+  },
+  async asyncData ({ $content, params }) {
+    const products = await $content('/products', params.slug)
+      .sortBy('createdAt', 'desc')
+      .limit(8)
+      .fetch()
+      .catch((err) => {
+        error({ statusCode: 404, message: 'Something went wrong, Please try again!' })
+      })
+
+    return { products }
   },
   data(){
       return {
