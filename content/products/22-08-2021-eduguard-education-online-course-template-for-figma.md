@@ -1,7 +1,7 @@
 ---
 layout: product
 title: Eduguard - Education & Online Course Template for Figma
-product_category: UI Templates
+productCategory: UI Templates
 date: 2021-08-22T08:40:40.907Z
 thumbnail: https://themeforest.img.customer.envatousercontent.com/files/326814155/00_Preview%20Image.__large_preview.jpg?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=a8b0cdeb0e6f822d5b4f51541c30a224
 gallery:
@@ -11,8 +11,9 @@ gallery:
 link: https://themeforest.net/item/eduguard-education-online-course-template-for-figma/30756853
 download: https://templatecookie-nuxt.netlify.app/
 purchase: https://themeforest.net/item/
-version: "2.0"
 price: 24
+product_category: UI Templates
+version: "2.0"
 description: >-
   Eduguard is an E-learning, education, and online course template made with
   Figma. This Website is designed based on extensive UX Research in order to
