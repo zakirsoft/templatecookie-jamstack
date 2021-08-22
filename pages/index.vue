@@ -57,6 +57,9 @@
             </div>
 
             {{ products }}
+            <div v-for="product in products" :key="product.slug">
+                <h2>{{ product.title }}</h2>
+            </div>
             <!--  item-->
             <div class="row">
                 <div class="col-md-6 col-lg-3 col-sm-6" v-for="product in products" :key="product.id">
