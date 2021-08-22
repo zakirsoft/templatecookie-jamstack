@@ -389,7 +389,7 @@
         </div>
 
         <!--  Newest template Section start-->
-        <slider-section :products="products" :slidesPerView="4" title="Related Template"></slider-section>
+        <!-- <slider-section :products="products" :slidesPerView="4" title="Related Template"></slider-section> -->
     </div>
 </template>
 

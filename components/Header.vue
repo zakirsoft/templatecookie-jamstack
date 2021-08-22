@@ -55,9 +55,11 @@
             </a>
             <nav>
                 <ul class="nav_item" id="nav_item">
-                    <li><nuxt-link :to="{ name: 'category-slug', params: {slug: 'abcd' }}" class="active" href="#">Free Template</nuxt-link></li>
-                    <li><nuxt-link :to="{ name: 'category-slug', params: {slug: 'hello' }}" href="#">HTML Template</nuxt-link></li>
-                    <li><nuxt-link :to="{ name: 'category-slug', params: {slug: 'awesome' }}" href="#">UI Template</nuxt-link></li>
+                    <li v-for="category in categories" :key="category.slug">
+                        <nuxt-link :to="{ name: 'category-slug', params: {slug: category.slug }}" class="active">
+                            {{ category.title }}
+                        </nuxt-link>
+                    </li>
                 </ul>
             </nav>
         </section>
@@ -67,7 +69,24 @@
 
 <script>
 export default {
-
+    data(){
+        return {
+            categories: [],
+        }
+    },
+    methods: {
+        async loadCategories(){
+            const categories = await this.$content('/categories').sortBy('createdAt', 'desc').limit(5)
+            .fetch()
+            .catch((err) => {
+                error({ statusCode: 404, message: 'Something went wrong, Please try again!' })
+            })
+            this.categories = categories;
+        },
+    },
+    mounted(){
+        this.loadCategories();
+    }
 }
 </script>
 

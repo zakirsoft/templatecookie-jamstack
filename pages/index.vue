@@ -48,50 +48,22 @@
                     <div class="filter-template-menu-item">
                         <ul>
                             <li><a href="#" class="active">All Template</a></li>
-                            <li><a href="#">HTML Template</a></li>
-                            <li><a href="#">Free Template</a></li>
-                            <li><a href="#">Browse all</a></li>
+                            <li v-for="category in categories" :key="category.slug"><a href="#">{{ category.title }}</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
-
-            {{ products }}
-            <div v-for="product in products" :key="product.slug">
-                <h2>{{ product.title }}</h2>
             </div>
             <!--  item-->
             <div class="row">
                 <div class="col-md-6 col-lg-3 col-sm-6" v-for="product in products" :key="product.id">
                     <product :product="product" />
                 </div>
-                <div class="col-md-6 col-lg-3  col-sm-6">
-                    <product />
-                </div>
-                <div class="col-md-6 col-lg-3  col-sm-6">
-                    <product />
-                </div>
-                <div class="col-md-6 col-lg-3  col-sm-6">
-                    <product />
-                </div>
-                <div class="col-md-6 col-lg-3  col-sm-6">
-                    <product />
-                </div>
-                <div class="col-md-6 col-lg-3  col-sm-6">
-                    <product />
-                </div>
-                <div class="col-md-6 col-lg-3 col-sm-6">
-                    <product />
-                </div>
-                <div class="col-md-6 col-lg-3  col-sm-6">
-                    <product />
-                </div>
             </div>
         </div>
     </section>
 
     <!--  Newest template Section start-->
-    <slider-section :products="products" :slidesPerView="5"  title="Newest Template" :bgImage="require('~/assets/images/newest-background.png')"></slider-section>
+    <!-- <slider-section :products="products" :slidesPerView="5"  title="Newest Template" :bgImage="require('~/assets/images/newest-background.png')"></slider-section> -->
     <!-- <section class="newest" :style="'background-image: url('+ require('~/assets/images/newest-background.png') +')'">
         <div class="container">
             <div class="newest--header">
@@ -134,9 +106,9 @@
             </div>
         </div>
     </section> -->
-
+    
     <!--  free Template  Section start-->
-    <section class="featured">
+    <!-- <section class="featured">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -160,10 +132,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!--  free template Section start-->
-    <slider-section :products="products" :slidesPerView="5" title="Free Template"></slider-section>
+    <!-- <slider-section :products="products" :slidesPerView="5" title="Free Template"></slider-section> -->
   </div>
 </template>
 
@@ -184,8 +156,15 @@ export default {
       .catch((err) => {
         error({ statusCode: 404, message: 'Something went wrong, Please try again!' })
       })
+    const categories = await $content('/categories', params.slug)
+      .sortBy('createdAt', 'desc')
+      .limit(8)
+      .fetch()
+      .catch((err) => {
+        error({ statusCode: 404, message: 'Something went wrong, Please try again!' })
+      })
 
-    return { products }
+    return { products, categories }
   },
   data(){
       return {
