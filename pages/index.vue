@@ -148,6 +148,22 @@ export default {
     Product,
     SliderSection
   },
+  head() {
+    let description = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum aperiam est cumque modi quas quis rem molestias vero earum tenetur voluptatibus sint velit recusandae, error minus odio doloribus beatae.';
+    let siteTitle = 'Templatecookie.com';
+    return {
+      title: siteTitle,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: siteTitle },
+        { hid: 'og:description', property: 'og:description', content: description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: siteTitle },
+        { hid: 'twitter:description', name: 'twitter:description', content: description }
+      ]
+    }
+  },
   async asyncData ({ $content, params }) {
     const products = await $content('/products', params.slug)
       .sortBy('createdAt', 'desc')
@@ -169,46 +185,7 @@ export default {
   data(){
       return {
           products: [
-              {
-                  id: 1,
-                  title: 'Product title goes here 1',
-                  price: 95
-              },
-              {
-                  id: 2,
-                  title: 'Product title goes here 2',
-                  price: 63
-              },
-              {
-                  id: 3,
-                  title: 'Product title goes here 3',
-                  price: 92
-              },
-              {
-                  id: 4,
-                  title: 'Product title goes here 4',
-                  price: 29
-              },
-              {
-                  id: 5,
-                  title: 'Product title goes here 5',
-                  price: 68
-              },
-              {
-                  id: 6,
-                  title: 'Product title goes here 6',
-                  price: 12
-              },
-              {
-                  id: 7,
-                  title: 'Product title goes here 7',
-                  price: 46
-              },
-              {
-                  id: 8,
-                  title: 'Product title goes here 8',
-                  price: 8
-              },
+              
           ]
       }
   },

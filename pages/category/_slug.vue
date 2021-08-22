@@ -47,7 +47,7 @@
                 <div class="mt-5 text-center">
                     <button type="submit" class="details--content__button">
                         Buy Now  
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="176.167 99.716 224.167 99.716 224.167 51.716" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"></polyline><path d="M190.2254,190.2254a88,88,0,1,1,0-124.4508l33.94112,33.94113" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"></path></svg>
+                        <load-more />
                     </button>
                 </div>
             </div>
@@ -57,8 +57,23 @@
 
 <script>
 import Home from '~/components/svg/Home.vue'
+import LoadMore from '~/components/svg/LoadMore.vue'
 export default {
-  components: { Home },
+  components: { Home, LoadMore },
+  head() {
+    return {
+      title: this.category.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.category.description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: this.category.title },
+        { hid: 'og:description', property: 'og:description', content: this.category.description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: this.category.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.category.description }
+      ]
+    }
+  },
   async asyncData ({ $content, params }) {
     const category = await $content('/categories', params.slug)
       .fetch()

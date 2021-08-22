@@ -1,7 +1,7 @@
 <template>
     <div class="filter--card">
         <div class="filter--card--img">
-            <nuxt-link :to="{ name: 'product-slug', params: {slug: 'abcd'} }">
+            <nuxt-link :to="{ name: 'product-slug', params: {slug: product.slug} }">
                 <img :src="'https://templatecookie-nuxt.netlify.app' + product.thumbnail" class=" filter--card--img" alt="...">
             </nuxt-link>
             <div class="filter--card--overlay text-center">
