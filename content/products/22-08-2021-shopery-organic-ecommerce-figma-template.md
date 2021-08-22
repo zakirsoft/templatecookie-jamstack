@@ -1,7 +1,7 @@
 ---
 layout: product
 title: Shopery - Organic eCommerce Figma Template
-product_category: UI Templates
+productCategory: UI Templates
 date: 2021-08-22T08:37:30.081Z
 thumbnail: /images/uploads/00_preview-image.__large_preview.jpg
 gallery:
@@ -10,8 +10,9 @@ gallery:
 link: https://frosty-meitner-6add8a.netlify.app/
 download: https://frosty-meitner-6add8a.netlify.app/
 purchase: https://templatecookie-nuxt.netlify.app/
-version: "1.2"
 price: 9
+product_category: UI Templates
+version: "1.2"
 description: >-
   
 
