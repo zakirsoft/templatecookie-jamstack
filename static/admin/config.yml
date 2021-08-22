@@ -46,7 +46,7 @@ collections:
           - { label: "Title", name: "imgTitle", widget: "string", required: false }
           - { label: "Description", name: "imgDesc", widget: "string", required: false }
           - { label: "Gallery Image", name: "imgSrc", widget: "image" }
-      - { label: "Product Category", name: "product_category", widget: "relation", colections: "category", search_fields: ["title"], value_field: "title", display_fields: "title" }
+      - { label: "Product Category", name: "product_category", widget: "relation", collection: "category", search_fields: ["title"], value_field: "title", display_fields: ["title"] }
   - name: "category" # Used in routes, e.g., /admin/collections/blog
     label: "Category" # Used in the UI
     folder: "content/categories" # The path to the folder where the documents are stored
