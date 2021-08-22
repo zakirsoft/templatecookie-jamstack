@@ -1,7 +1,7 @@
 ---
 layout: product
 title: "Test Product "
-product_category: HTML Template
+productCategory: HTML Template
 date: 2021-07-12T13:50:54.867Z
 thumbnail: /images/uploads/how-i-created-a-software-company-at-the-age-of-24.png
 gallery:
@@ -10,8 +10,9 @@ gallery:
 link: https://hasaal.netlify.app/
 download: https://codecanyon.net/user/templatecookie
 purchase: https://templatecookie-nuxt.netlify.app/
-version: "1.0"
 price: 20
+product_category: HTML Template
+version: "1.0"
 description: this is the test description.
 template_feature: |-
   * This is template Four
