@@ -27,15 +27,9 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Layout", name: "layout", widget: "hidden", default: "product" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Product Category", name: "product_category", widget: "relation", collection: "category", search_fields: ["title"], value_field: "title", display_fields: ["title"] }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Demo Link", name: "link", widget: "string", required: false }
-      - { label: "Download Link", name: "download", widget: "string", required: false }
-      - { label: "Purchase Link", name: "purchase", widget: "string", required: false }
-      - { label: "Version", name: "version", widget: "string" }
-      - { label: "Product Price", name: "price", widget: "number" }
-      - { label: "Description", name: "description", widget: "markdown" }
-      - { label: "Template Feature", name: "template_feature", widget: "markdown" }
       - name: "gallery"
         label: "Gallery"
         folder: "images/gallery" # The path to the folder where the documents are stored
@@ -46,7 +40,13 @@ collections:
           - { label: "Title", name: "imgTitle", widget: "string", required: false }
           - { label: "Description", name: "imgDesc", widget: "string", required: false }
           - { label: "Gallery Image", name: "imgSrc", widget: "image" }
-      - { label: "Product Category", name: "product_category", widget: "relation", collection: "category", search_fields: ["title"], value_field: "title", display_fields: ["title"] }
+      - { label: "Demo Link", name: "link", widget: "string", required: false }
+      - { label: "Download Link", name: "download", widget: "string", required: false }
+      - { label: "Purchase Link", name: "purchase", widget: "string", required: false }
+      - { label: "Version", name: "version", widget: "string" }
+      - { label: "Product Price", name: "price", widget: "number" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Template Feature", name: "template_feature", widget: "markdown" }
   - name: "category" # Used in routes, e.g., /admin/collections/blog
     label: "Category" # Used in the UI
     folder: "content/categories" # The path to the folder where the documents are stored
