@@ -26,7 +26,7 @@
                                                 stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                    <span class="default-breadcumbs">{{ product.product_category }}</span>
+                                    <span class="default-breadcumbs">{{ product.productCategory }}</span>
                                     <span class="default-breadcumbs">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">

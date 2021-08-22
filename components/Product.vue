@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="filter--card--body">
-            <a class="cat" href="#">{{ product.product_category }}</a>
+            <a class="cat" href="#">{{ product.productCategory }}</a>
             <nuxt-link :to="{ name: 'product-slug', params: {slug: product.slug } }" class="d-block">
                 <h5 class="card-title">{{ product.title }}</h5>
             </nuxt-link>

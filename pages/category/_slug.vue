@@ -81,7 +81,7 @@ export default {
         error({ statusCode: 404, message: 'Category not found' })
       })
 
-    const products = await $content('/products').where({ product_category: category.title})
+    const products = await $content('/products').where({ productCategory: category.title})
       .sortBy('createdAt', 'desc')
       .limit(8)
       .fetch()
