@@ -1,7 +1,11 @@
 <template>
     <div>
+        <nuxt-content :document="product"/>
+        <hr>
+        {{ product }}
+        
         <!-- details banner Section start-->
-        <section class="details details--banner">
+        <!-- <section class="details details--banner">
             <div class="details" :style="'background-image: url('+ require('~/assets/images/details-banner.png') +')'">
                 <div class="container">
                     <div class="row ">
@@ -57,7 +61,6 @@
         </section>
 
         <div class="bg-white" style="padding: 50px 0;">
-            <!-- Description banner Section start -->
             <section class="description">
                 <div class="container">
                     <div class="row">
@@ -153,7 +156,6 @@
                 </div>
             </section>
 
-            <!--  template description start-->
             <section class="template--feature">
                 <div class="container">
                     <div class="row">
@@ -178,7 +180,7 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </div> -->
 
         <!--  Newest template Section start-->
         <!-- <slider-section :products="products" :slidesPerView="4" title="Related Template"></slider-section> -->
@@ -224,12 +226,8 @@ export default {
     }
   },
   async asyncData ({ $content, params }) {
-    const product = await $content('/products', params.slug)
-      .sortBy('createdAt', 'desc')
-      .fetch()
-      .catch((err) => {
-        error({ statusCode: 404, message: 'Product not found' })
-      })
+    // const product = await $content('/products', params.slug).fetch();
+    const product = await $content('/products/22-08-2021-eduguard-education-online-course-template-for-figma').fetch();
     return { product }
   },
   data(){

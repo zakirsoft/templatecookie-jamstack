@@ -19,12 +19,12 @@ collections:
         fields:
           - { label: Site Name, name: sitename, widget: string, hint: 'This is used for the site title' }
           - { label: Site Description, name: sitedescription, widget: string, hint: 'This is used as descriptive text for links that link to this site', }
-  - name: "product" # Used in routes, e.g., /admin/collections/blog
-    label: "Product" # Used in the UI
-    folder: "content/products" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{day}}-{{month}}-{{year}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: "product"
+    label: "Product"
+    folder: "content/products"
+    create: true
+    slug: "{{day}}-{{month}}-{{year}}-{{slug}}"
+    fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "product" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Product Category", name: "productCategory", widget: "relation", collection: "category", search_fields: ["title"], value_field: "title", display_fields: ["title"] }
@@ -32,10 +32,10 @@ collections:
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - name: "gallery"
         label: "Gallery"
-        folder: "images/gallery" # The path to the folder where the documents are stored
+        folder: "images/gallery"
         widget: "list"
         optional: true
-        create: true # Allow users to create new documents in this collection
+        create: true
         fields:
           - { label: "Title", name: "imgTitle", widget: "string", required: false }
           - { label: "Description", name: "imgDesc", widget: "string", required: false }
@@ -46,13 +46,19 @@ collections:
       - { label: "Version", name: "version", widget: "string" }
       - { label: "Product Price", name: "price", widget: "number" }
       - { label: "Description", name: "description", widget: "markdown" }
-      - { label: "Template Feature", name: "template_feature", widget: "markdown" }
-  - name: "category" # Used in routes, e.g., /admin/collections/blog
-    label: "Category" # Used in the UI
-    folder: "content/categories" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+      - label: "Template Feature"
+        name: "template_feature"
+        widget: "list",
+        collapsed: true,
+        max: 10,
+        summary: '{{fields.title}}'
+        field: { label: "Title", name: "title", widget: "string" }
+  - name: "category"
+    label: "Category"
+    folder: "content/categories"
+    create: true
+    slug: "{{slug}}"
+    fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "category" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Featured Image", name: "banner", widget: "image", required: false }

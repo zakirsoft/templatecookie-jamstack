@@ -1,8 +1,8 @@
 <template>
   <div>
-    <site-header></site-header>
+    <!-- <site-header></site-header> -->
     <Nuxt />
-    <site-footer></site-footer>
+    <!-- <site-footer></site-footer> -->
   </div>
 </template>
 
