@@ -226,8 +226,11 @@ export default {
     }
   },
   async asyncData ({ $content, params }) {
-    // const product = await $content('/products', params.slug).fetch();
-    const product = await $content('/products/22-08-2021-eduguard-education-online-course-template-for-figma').fetch();
+    const product = await $content('/products', params.slug)
+    .fetch()
+    .catch(err => {
+        error({ statusCode: 404, message: "Page not found" });
+    });
     return { product }
   },
   data(){
