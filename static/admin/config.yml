@@ -49,10 +49,9 @@ collections:
       - name: "template_feature"
         label: "Template Feature"
         widget: "list"
-        collapsed: true
         max: 10
-        summary: '{{fields.title}}'
-        field: { label: "Title", name: "title", widget: "string" }
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
   - name: "category"
     label: "Category"
