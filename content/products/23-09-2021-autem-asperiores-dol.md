@@ -13,8 +13,8 @@ purchase: Reprehenderit ab vo
 version: Dicta ullamco archit
 price: 622
 template_feature:
-  - title: Awesome, this is cool
   - title: This is very cool
+  - title: Awesome, this is cool
   - title: "This is very cool plus plus "
 description: >-
   **Version:** Dicta ullamco archit **Version:** Dicta ullamco archit
