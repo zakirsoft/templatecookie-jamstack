@@ -1,11 +1,15 @@
 <template>
     <div>
-        <nuxt-content :document="product"/>
+        <!-- <nuxt-content :document="product"/>
         <hr>
-        {{ product }}
+        <code>
+            <pre>
+                 {{ product }}
+            </pre>
+        </code> -->
         
         <!-- details banner Section start-->
-        <!-- <section class="details details--banner">
+        <section class="details details--banner">
             <div class="details" :style="'background-image: url('+ require('~/assets/images/details-banner.png') +')'">
                 <div class="container">
                     <div class="row ">
@@ -163,27 +167,24 @@
                             <div class="template--feature--header">
                                 <h3>Template Feature</h3>
                             </div>
-                            <div class="template--feature-item">
+                            <div class="template--feature-item" v-for="item in product.template_feature" :key="item.title">
                                 <li>
                                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M16.875 5.6254L8.125 14.375L3.75 10.0004" stroke="#0FAC1F" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg> 
-                                    <span>40+ High-quality Screens in Figma Template.</span>
+                                    <span>{{ item.title }}</span>
                                 </li>
-                            </div>
-                            <div class="template--feature-item">
-                                {{ product.template_feature }}
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </div> -->
+        </div>
 
         <!--  Newest template Section start-->
-        <!-- <slider-section :products="products" :slidesPerView="4" title="Related Template"></slider-section> -->
+        <slider-section :products="products" :slidesPerView="4" title="Related Template"></slider-section>
     </div>
 </template>
 
