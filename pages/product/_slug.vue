@@ -72,10 +72,7 @@
                             <div class="description--header">
                                 <h3>Description</h3>
                             </div>
-                            <div class="description--content">
-                              {{ product.description }}
-                               <nuxt-content :document="product"/>
-                            </div>
+                            <div class="description--content" v-html="$md.render(product.description)">  </div>
                         </div>
                         <div class="col-md-12 col-lg-4">
                             <div class="card">
